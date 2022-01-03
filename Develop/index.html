@@ -9,13 +9,16 @@
   </head>
   <body>
     <div class="wrapper">
+		
       <header>
         <h1>Password Generator</h1>
       </header>
+	  
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
+		
         <div class="card-body">
           <textarea
             readonly
@@ -24,11 +27,48 @@
             aria-label="Generated Password"
           ></textarea>
         </div>
+		
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+	  
+	  <div id="pop-up-selection" class="popUp">
+		  
+		  <div class="pop-up-content">
+			  <span class="close">&times;</span>
+			  <p>
+				  Please select a minimum of one to include in your password:
+			  </p>
+			  <span class="checkbox-wrapper">
+				  <input type="checkbox" name="uppercase" id="uppercase" />
+				  <label for="uppercase">
+					  Include uppercase letters (ABCDE)
+				  </label>
+				  
+				  <input type="checkbox" name="lowercase" id="lowercase" />
+				  <label for="lowercase">
+					  Inclue lowercase letters (abcde)
+				  </label>
+				  
+				  <input type="checkbox" name="numbers" id="numbers" />
+				  <label for="numbers">
+					  Include numbers (123456789)
+				  </label>
+				  
+				  <input type="checkbox" name="special-characters" id="special-characters" />
+				  <label for="special-characters">
+					  Include special characters (!@#$)
+				  </label>
+			  </span>
+			  
+			  <button id="confirm" class="pop-up-confirm">Confirm Selection</button>
+		  </div>
+		  
+	  </div>
+	  
     </div>
+	
     <script src="script.js"></script>
   </body>
 </html>

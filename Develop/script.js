@@ -3,6 +3,9 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var confirmSelection = document.querySelector('#confirm');
+var popUp = document.getElementById("pop-up-selection");
+var close = document.getElementsByClassName("close")[0];
 
 // Get input from user of what they want in their password
 var getPasswordLimits = function() {
@@ -44,15 +47,16 @@ var generatePassword = function(passwordLength) {
 	var password = "";
 	var arrayOfCharacters = [];
 	
-	// create an array of all characters the user wants
+	// create an array of all characters the user chose to include
 	for (var a = 0; a < passwordRules.length; a++) {
 		if (passwordRules[a].include) {
 			arrayOfCharacters.push.apply(arrayOfCharacters, passwordRules[a].characters);
 		}
 	}
 
-	// find a random number and find 
+	// find a random number and add the character from the arrayOfCharacters to 'password'
 	for (var i = 0; i < passwordLength; i++) {
+		// get a random number between 0 and the length of characters the user wanted
 		var randomNumber = Math.floor(Math.random() * arrayOfCharacters.length);
 		password += arrayOfCharacters[randomNumber];
 	}
@@ -61,6 +65,7 @@ var generatePassword = function(passwordLength) {
 
 // Write password to the #password input
 function writePassword() {
+	popUp.style.display = "none";
   	var password = generatePassword(getPasswordLimits());
   	var passwordText = document.querySelector("#password");
 
@@ -92,4 +97,23 @@ var passwordRules = [
 ];
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+// Once button is pressed on main screen, open pop up
+generateBtn.onClick = function(){
+	popUp.style.display = "block";
+}
+// If user selects the close button
+close.onclick = function() {
+	popUp.style.display = "none";
+}
+// Get out of the pop up if the user click out of it
+window.onclick = function(event) {
+	if (event.target === popUp) {
+		popUp.style.display = "none";
+	}
+}
+
+// Button in pop up after user selects checkboxes
+confirmSelection.addEventListener("click", writePassword);
+// Send to pop up
+generateBtn.addEventListener("click", generateBtn.onClick)
