@@ -1,7 +1,7 @@
 // Assignment code here
 
 
-// Get references to the #generate element
+// Get references to all conent needed
 var generateBtn = document.querySelector("#generate");
 var confirmSelection = document.querySelector('#confirm');
 var popUp = document.getElementById("pop-up-selection");

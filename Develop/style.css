@@ -146,6 +146,12 @@ button[disabled] {
 	display: flex;
 	flex-flow: column;
 }
+.checkbox-wrapper input {
+	text-align: center;
+}
+.pop-up-content form #passwordLength {
+	
+}
 .close {
 	color: #aaa;
 	float: right;
