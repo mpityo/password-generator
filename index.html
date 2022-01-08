@@ -32,6 +32,7 @@
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+  </div>
 	  
 	  <div id="pop-up-selection" class="popUp">
 		  
@@ -42,37 +43,35 @@
 			  </p>
 			  <form>
 			  <span class="checkbox-wrapper">
-				  <input type="checkbox" name="uppercase" id="uppercase" />
-				  <label for="uppercase">
+				  <input type="checkbox" name="rules" id="0" />
+				  <label for="uppercase letters">
 					  Include uppercase letters (ABCDE)
 				  </label>
 				  
-				  <input type="checkbox" name="lowercase" id="lowercase" />
-				  <label for="lowercase">
+				  <input type="checkbox" name="rules" id="1" />
+				  <label for="lowercase letters">
 					  Inclue lowercase letters (abcde)
 				  </label>
 				  
-				  <input type="checkbox" name="numbers" id="numbers" />
+				  <input type="checkbox" name="rules" id="2" />
 				  <label for="numbers">
 					  Include numbers (123456789)
 				  </label>
 				  
-				  <input type="checkbox" name="special-characters" id="special-characters" />
-				  <label for="special-characters">
+				  <input type="checkbox" name="rules" id="3" />
+				  <label for="special characters">
 					  Include special characters (!@#$)
 				  </label>
 			  </span>
 			  
 			  <label for="passwordLength">How long do you want your password? (Between 8 - 128)</label>
-			  <textarea id="passwordLength" placeholder="Password length"></textarea>
+			  <input type="text" id="passwordLength" placeholder="Password length"></input>
 			  
 			  <button id="confirm" class="pop-up-confirm">Confirm Selection</button>
-		  </form>
+		  	</form>
 		  </div>
 		  
 	  </div>
-	  
-    </div>
 	
     <script src="./Develop/script.js"></script>
   </body>
