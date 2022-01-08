@@ -93,10 +93,11 @@ var generatePassword = function(passwordLength) {
 
 // Write password to the #password input
 function writePassword() {
+	debugger;
 	popUp.style.display = "none";
   	var password = generatePassword(getPasswordLimits());
+	
   	var passwordText = document.querySelector("#password");
-
   	passwordText.value = password;
 
 }
@@ -145,3 +146,5 @@ window.onclick = function(event) {
 generateBtn.addEventListener("click", generateBtn.onClick);
 // Button in pop up after user selects checkboxes
 confirmSelection.addEventListener("click", writePassword);
+
+console.log("End of program");
