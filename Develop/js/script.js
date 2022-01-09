@@ -7,6 +7,21 @@ var confirmSelection = document.querySelector('#confirm');
 var popUp = document.getElementById("pop-up-selection");
 var close = document.getElementsByClassName("close")[0];
 
+// Once button is pressed on main screen, open pop up
+generateBtn.onClick = function(){
+	popUp.style.display = "block";
+}
+// If user selects the close button
+close.onclick = function() {
+	popUp.style.display = "none";
+}
+// Get out of the pop up if the user click out of it
+window.onclick = function(event) {
+	if (event.target === popUp) {
+		popUp.style.display = "none";
+	}
+}
+
 var getPasswordLimits = function() {
 	// set up variables and get info for user selections
 	var oneLimitSelected = false;
@@ -125,26 +140,7 @@ var passwordRules = [
 	}
 ];
 
-// Add event listener to generate button
-
-// Once button is pressed on main screen, open pop up
-generateBtn.onClick = function(){
-	popUp.style.display = "block";
-}
-// If user selects the close button
-close.onclick = function() {
-	popUp.style.display = "none";
-}
-// Get out of the pop up if the user click out of it
-window.onclick = function(event) {
-	if (event.target === popUp) {
-		popUp.style.display = "none";
-	}
-}
-
 // Send to pop up
 generateBtn.addEventListener("click", generateBtn.onClick);
 // Button in pop up after user selects checkboxes
 confirmSelection.addEventListener("click", writePassword);
-
-console.log("End of program");
