@@ -144,13 +144,26 @@ button[disabled] {
 }
 .checkbox-wrapper {
 	display: flex;
-	flex-flow: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    line-height: 2;
 }
-.checkbox-wrapper input {
-	text-align: center;
+.freeform-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
 }
-.pop-up-content form #passwordLength {
-	
+.freeform-wrapper label {
+    font-weight: bold;
+    font-size: large;
+}
+#passwordLength {
+    margin-left: 10px;
 }
 .close {
 	color: #aaa;

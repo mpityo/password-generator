@@ -1,6 +1,3 @@
-// Assignment code here
-
-
 // Get references to all conent needed
 var generateBtn = document.querySelector("#generate");
 var confirmSelection = document.querySelector('#confirm');
@@ -49,40 +46,6 @@ var getPasswordLimits = function() {
 	}
 	 return 0;
 }
-/* Get input from user of what they want in their password
-var getPasswordLimits = function() {
-	var oneLimitSelected = false;
-	// ask user for CHARACTERS they WANT
-	for (var i = 0; i < passwordRules.length; i++) {
-		var confirmation = window.confirm("Do you want to include " + passwordRules[i].item + " in the password?");
-		passwordRules[i].include = confirmation;
-		if(confirmation)
-			oneLimitSelected = true;
-	}
-	
-	// ensure the user selected at least one rule, if not reset back to beginning
-	if (!oneLimitSelected) {
-		window.alert("You must select at least one rule! Try again.");
-		getPasswordLimits();
-	}
-	
-	// ask user for PASSWORD LENGTH, loop if length entered is not 8 > 128
-	do {
-		var input = window.prompt("How long would you like the password to be?" +
-								"\n\n(Must be between 8 and 128 characters)");
-		// if user doesn't enter a value or clicks "okay" / "cancel"
-		if (input === null || input === "") {
-			window.alert("Defaulting to a 16 character password.");
-			return 16;
-		}
-		
-		// convert user input to an integer for easier comparison
-		var length = parseInt(input);
-	} while (length < 8 || length > 128);
-	
-	// only returns length if it passes the do-while loop
-	return length;
-}*/
 
 // Generate the password using how long and what characters the user selected
 var generatePassword = function(passwordLength) {
@@ -108,13 +71,11 @@ var generatePassword = function(passwordLength) {
 
 // Write password to the #password input
 function writePassword() {
-	debugger;
 	popUp.style.display = "none";
   	var password = generatePassword(getPasswordLimits());
-	
-  	var passwordText = document.querySelector("#password");
-  	passwordText.value = password;
 
+	var passwordText = document.querySelector("#password");
+	passwordText.value = password;
 }
 
 var passwordRules = [
@@ -140,7 +101,7 @@ var passwordRules = [
 	}
 ];
 
-// Send to pop up
-generateBtn.addEventListener("click", generateBtn.onClick);
 // Button in pop up after user selects checkboxes
 confirmSelection.addEventListener("click", writePassword);
+// Send to pop up
+generateBtn.addEventListener("click", generateBtn.onClick);
