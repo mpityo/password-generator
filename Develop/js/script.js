@@ -72,6 +72,7 @@ var generatePassword = function(passwordLength) {
 // Write password to the #password input
 function writePassword() {
 	popUp.style.display = "none";
+	resetIncludeRules();
   	var password = generatePassword(getPasswordLimits());
 
 	var passwordText = document.querySelector("#password");
@@ -100,6 +101,11 @@ var passwordRules = [
 		characters: ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '/']
 	}
 ];
+var resetIncludeRules = function() {
+	for (var i = 0; i < passwordRules.length; i++) {
+		passwordRules[i].include = false;
+	}
+}
 
 // Button in pop up after user selects checkboxes
 confirmSelection.addEventListener("click", writePassword);
