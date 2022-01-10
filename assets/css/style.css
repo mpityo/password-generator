@@ -141,6 +141,7 @@ button[disabled] {
 	border: 1px solid grey;
 	width: 80%;
 	text-align: center;
+    font-size: 17px;
 }
 .checkbox-wrapper {
 	display: flex;
@@ -156,11 +157,13 @@ button[disabled] {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 20px;
 }
-.freeform-wrapper label {
+.freeform-wrapper label,
+.pop-up-content p {
     font-weight: bold;
-    font-size: large;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 #passwordLength {
     margin-left: 10px;

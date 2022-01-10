@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="./Develop/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -17,30 +17,30 @@
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
-        </div>
-		
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
-        </div>
-		
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
-        </div>
       </div>
+		
+      <div class="card-body">
+        <textarea
+          readonly
+          id="password"
+          placeholder="Your Secure Password"
+          aria-label="Generated Password"
+        ></textarea>
+      </div>
+		
+      <div class="card-footer">
+        <button id="generate" class="btn">Generate Password</button>
+      </div>
+    </div>
   </div>
 	  
 	  <div id="pop-up-selection" class="popUp">
 		  
 		  <div class="pop-up-content">
 			  <span class="close">&times;</span>
-			  <h3>
+			  <p>
 				  Please select a minimum of one to include in your password:
-        </h3>
+        </p>
 			  <form>
 			  <span class="checkbox-wrapper">
 				  <span class="checkbox-line">
@@ -51,24 +51,24 @@
           </span>
 				  
           <span class="checkbox-line">
-				  <input type="checkbox" name="rules" id="1" />
-				  <label for="lowercase letters">
-					  Inclue lowercase letters (abcde)
-				  </label>
+  				  <input type="checkbox" name="rules" id="1" />
+	  			  <label for="lowercase letters">
+		  			  Inclue lowercase letters (abcde)
+			  	  </label>
           </span>
 				  
           <span class="checkbox-line">
-				  <input type="checkbox" name="rules" id="2" />
-				  <label for="numbers">
-					  Include numbers (123456789)
-				  </label>
+  				  <input type="checkbox" name="rules" id="2" />
+	  			  <label for="numbers">
+		  			  Include numbers (123456789)
+			  	  </label>
           </span>
 				  
           <span class="checkbox-line">
-				  <input type="checkbox" name="rules" id="3" />
-				  <label for="special characters">
-					  Include special characters (!@#$)
-				  </label>
+  				  <input type="checkbox" name="rules" id="3" />
+	  			  <label for="special characters">
+		  			  Include special characters (!@#$)
+			  	  </label>
           </span>
 			  </span>
 			  
@@ -83,6 +83,6 @@
 		  
 	  </div>
 	
-    <script src="./Develop/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
