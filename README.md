@@ -1,15 +1,15 @@
 # Password Generator/Randomizer
-Based on a choice of 5 inputs, recieve a randomly generated password between 8 and 128 characters long. The program includes full UI interaction, instead of window alerts.
+Based on a choice of 5 inputs, receive a randomly generated password between 8 and 128 characters long. The program includes full UI interaction, instead of window alerts.
 <br>
 <br>
 Project is fully open source: explore the code and upgrade away!
 <br>
 
 ## 📝 Features
- - Fully customizable user selection interface that is intuitive and user friendly
- - Client-side processing; your password and input will not be sent anywhere
- - Fast proccessing time and easy to copy password form
- - Easily used offline and easily integrated into other projects
+ - Fully customized user selection interface that is intuitive while being user friendly
+ - Client-side processing; your password and input will not be sent anywhere!
+ - Fast processing time and easy to copy password form
+ - Easily used offline and integrated into other projects
 
 ## 🔑 How to access
 The code base can be cloned from the GitHub repo [here](https://github.com/mpityo/password-generator).<br>
